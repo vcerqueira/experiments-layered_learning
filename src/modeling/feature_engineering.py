@@ -2,7 +2,7 @@ from typing import Dict
 import pandas as pd
 import numpy as np
 
-from feature_extraction.statistics_set \
+from src.modeling.statistics_set \
     import (ccf_features,
             wavelet_features,
             STATS_FUN_UNIV)

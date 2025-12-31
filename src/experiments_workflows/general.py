@@ -1,19 +1,12 @@
-from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
-from sklearn.metrics import auc, roc_auc_score, classification_report
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import roc_auc_score, classification_report
 
-from evaluation.metrics import ActivityMonitoringEvaluation
+from src.data_models.metrics import ActivityMonitoringEvaluation
 
 
-def prepare_training_set(train_episodes,
-                         drop_na: bool = True):
-    """
-    :param train_episodes:
-    :param drop_na:
-    :param split_validation:
-    :return:
-    """
+def prepare_training_set(train_episodes, drop_na: bool = True):
     train = pd.concat(train_episodes)
 
     train_patients_ids = [*train_episodes]

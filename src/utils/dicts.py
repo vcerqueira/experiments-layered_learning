@@ -37,5 +37,3 @@ def dict_argmax(x):
     x_best_key = [*x][int(np.argmax(x_values))]
 
     return x_best_key
-
-

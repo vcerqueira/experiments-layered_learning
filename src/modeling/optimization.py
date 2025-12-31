@@ -2,9 +2,8 @@ import numpy as np
 import pandas as pd
 
 from sklearn.metrics import classification_report
-from sklearn.model_selection import train_test_split
 
-from utils.dicts import dict_argmax
+from src.utils.dicts import dict_argmax
 
 
 def optimize_threshold_recalls(y_hat_prob: np.ndarray,

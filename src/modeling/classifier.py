@@ -4,8 +4,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import cohen_kappa_score
 from sklearn.base import BaseEstimator, ClassifierMixin
 
-from utils.grid_search import expand_grid_from_dict, parse_config
-from utils.dicts import dict_argmax
+from src.utils.grid_search import expand_grid_from_dict, parse_config
+from src.utils.dicts import dict_argmax
 
 parameter_search_model = \
     dict(num_leaves=[15, 31],

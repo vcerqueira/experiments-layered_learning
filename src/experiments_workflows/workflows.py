@@ -2,23 +2,14 @@ import re
 
 import numpy as np
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.impute import SimpleImputer
-from imblearn.under_sampling \
-    import (RandomUnderSampler,
-            TomekLinks,
-            InstanceHardnessThreshold)
-from imblearn.over_sampling \
-    import (ADASYN,
-            RandomOverSampler,
-            SMOTE)
-from imblearn.combine import SMOTETomek
-from experiments_workflows.isolation_forest import IsolationForestUnsupervised
+from imblearn.over_sampling import SMOTE
 
-from experiments_workflows.general import prepare_training_set, xy_retrieval
-from threshold.optimization import clf_threshold_selection
-from experiments_workflows.ll import LayeredLearning
+from src.experiments_workflows.isolation_forest import IsolationForestUnsupervised
+from src.experiments_workflows.general import prepare_training_set, xy_retrieval
+from src.modeling.optimization import clf_threshold_selection
+from src.experiments_workflows.ll import LayeredLearning
 
 
 class Workflows:
